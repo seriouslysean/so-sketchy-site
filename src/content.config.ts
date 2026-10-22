@@ -24,7 +24,10 @@ const releases = defineCollection({
   schema: z.object({
     version: z.string(),
     date: z.string(),
-    appStore: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional(),
+    appStore: z
+      .string()
+      .regex(/^\d{4}-\d{2}-\d{2}$/)
+      .optional(),
     highlights: z.array(z.string()),
   }),
 });

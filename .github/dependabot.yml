@@ -1,7 +1,7 @@
 version: 2
 updates:
   - package-ecosystem: github-actions
-    directory: "/"
+    directory: '/'
     schedule:
       interval: weekly
     commit-message:
@@ -9,10 +9,10 @@ updates:
       include: scope
     groups:
       github_actions:
-        patterns: ["*"]
+        patterns: ['*']
         update-types: [minor, patch]
   - package-ecosystem: npm
-    directory: "/"
+    directory: '/'
     schedule:
       interval: weekly
     commit-message:
@@ -20,10 +20,10 @@ updates:
       include: scope
     groups:
       npm:
-        patterns: ["*"]
+        patterns: ['*']
         update-types: [minor, patch]
     ignore:
       # Held at TypeScript 6: astro check refuses TypeScript 7.0; Astro's TypeScript 7 support needs
       # 7.1+ with @astrojs/ts-content-mapper. Remove this once that's supported.
-      - dependency-name: "typescript"
-        update-types: ["version-update:semver-major"]
+      - dependency-name: 'typescript'
+        update-types: ['version-update:semver-major']
