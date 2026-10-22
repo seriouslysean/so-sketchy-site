@@ -20,5 +20,4 @@ export const getUrl = (path = '/'): string => {
   return cleanBasePath + normalizedPath;
 };
 
-export const getFullUrl = (path = '/'): string =>
-  new URL(getUrl(path), SITE_URL).toString();
+export const getFullUrl = (path = '/'): string => new URL(getUrl(path), SITE_URL).toString();
