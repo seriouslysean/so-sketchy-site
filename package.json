@@ -16,7 +16,8 @@
     "astro": "astro",
     "lint": "oxlint . && oxfmt --check",
     "lint:fix": "oxlint . --fix && oxfmt",
-    "typecheck": "astro check"
+    "typecheck": "astro check",
+    "test": "node --test"
   },
   "dependencies": {
     "astro": "^7.3.3"
