@@ -1,5 +1,46 @@
 [
  {
+  "version": "3.6.1",
+  "date": "2026-10-22",
+  "highlights": [
+   "Fix purchase buttons that did nothing when tapped",
+   "Explain in a dialog why a purchase did not go through",
+   "Show a spinner on the purchase button you tapped",
+   "Retry loading store prices after a failed load",
+   "Widen the Buy and Done buttons to match the pack rows",
+   "Rename the bundle overlap button to Buy Anyway"
+  ]
+ },
+ {
+  "version": "3.6.0",
+  "date": "2026-10-08",
+  "highlights": [
+   "Add a Report a Problem row to Settings > Privacy",
+   "Show the support address when a Settings mail link can't open",
+   "Lighten the Noir theme's button wash",
+   "Rewrite the Noir and ROYGBIV theme descriptions"
+  ]
+ },
+ {
+  "version": "3.5.1",
+  "date": "2026-10-07",
+  "highlights": [
+   "Update internal development checks and documentation"
+  ]
+ },
+ {
+  "version": "3.5.0",
+  "date": "2026-10-07",
+  "highlights": [
+   "Use Title Case for buttons, titles and menu items",
+   "Remove the caption above the Version History list",
+   "Keep the selected drawing tool easy to tap at its edges",
+   "Have VoiceOver say whether a color pack is owned or for sale in Pick a Color",
+   "Keep a favorite when its iCloud copy arrives damaged",
+   "Retry a waiting drawing's missed iCloud save the next time you open the game"
+  ]
+ },
+ {
   "version": "3.4.0",
   "date": "2026-10-02",
   "highlights": [
@@ -73,7 +114,7 @@
   "version": "3.2.1",
   "date": "2026-09-04",
   "highlights": [
-   "Update internal development checks and documentation with nothing new on screen"
+   "Update internal development checks and documentation"
   ]
  },
  {
