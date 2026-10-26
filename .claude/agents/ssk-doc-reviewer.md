@@ -1,12 +1,12 @@
 ---
 name: ssk-doc-reviewer
-description: Writes and reviews agent-facing documentation. Scope covers CLAUDE.md, README.md, docs/**, and .claude/**/*.md. Use whenever a request proposes writing or editing any of these paths, even when the change seems small or mechanical. All writes to these paths must route through this agent; the main thread does not edit them directly.
+description: Writes and reviews agent-facing documentation. Scope covers AGENTS.md, CLAUDE.md, README.md, docs/**, and .claude/**/*.md. Use whenever a request proposes writing or editing any of these paths, even when the change seems small or mechanical. All writes to these paths must route through this agent; the main thread does not edit them directly.
 tools: Read, Glob, Grep, Write, Edit
 model: inherit
 color: yellow
 ---
 
-Read `CLAUDE.md` before the first edit in a session.
+Read `AGENTS.md` before the first edit in a session.
 
 ## Modes
 

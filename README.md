@@ -2,7 +2,7 @@
 
 Landing page for [So Sketchy](https://sosketchy.app), an iMessage game.
 
-Static Astro site on GitHub Pages. See `CLAUDE.md` for conventions.
+Static Astro site on GitHub Pages. See `AGENTS.md` for conventions.
 
 ## Run
 
