@@ -1,0 +1,44 @@
+# sosketchy.app
+
+Landing page for So Sketchy. Static Astro site on GitHub Pages.
+
+So Sketchy is an async iMessage game. No server, no accounts. Gameplay state
+travels in iMessage URLs. The site must not leak it.
+
+## Commands
+
+- Install: `npm ci` (Node version in `.nvmrc`; `SITE_URL` env required, see `.env.example`).
+- Gate before a PR: `npm run lint && npm run typecheck && npm run build && npm test`, the same checks as `.github/workflows/ci.yml`.
+- Where things live: `src/` site code, `public/` static files, `tests/` tests, `docs/` guides, `.claude/agents/` the documentation reviewer.
+
+## Principles
+
+- Static only. No SSR, no analytics, no third-party scripts. Inline client JS
+  is allowed for runtime-dynamic values that would rot if baked at build time.
+- Never render, log, or echo URL query params on any route.
+- Brand tokens mirror the app's default UX pack; see `docs/brand.md`.
+- `/g` is reserved for the iMessage fallback URL. When it ships it stays
+  `noindex`, no-referrer, and must not reflect any query param.
+
+## Conventions
+
+- Vanilla CSS. Native nesting, `@layer`, logical properties.
+- Internal route URLs carry a trailing slash (`trailingSlash: 'always'`).
+- Extension-bearing files (favicons, manifest, sitemaps, OG image) and the robots.txt `Disallow` prefix carry no trailing slash. `Disallow: /g` must still match the query-string fallback `/g?state=...`.
+
+## Architecture
+
+- Single layout: `src/layouts/Base.astro`. Owns head, meta, OG, favicons.
+- JSON-LD: `src/components/StructuredData.astro`. New schemas go here.
+- `SITE_URL` env required. Build and dev fail without it.
+- Release notes: content collection in `src/content.config.ts` over `src/data/release-notes.json`. The app repo's release tool overwrites that file; never edit or move it.
+
+## Deploy
+
+Push `main`. GitHub Actions builds and deploys to Pages. Custom domain via
+`public/CNAME`. DNS and repo settings live outside the codebase.
+
+## Documentation
+
+All writes to `AGENTS.md`, `README.md`, `docs/**`, and `.claude/**/*.md` route
+through `ssk-doc-reviewer`. No direct edits.
