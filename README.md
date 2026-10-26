@@ -9,7 +9,7 @@ Static Astro site on GitHub Pages. See `CLAUDE.md` for conventions.
 ```bash
 nvm use
 cp .env.example .env
-npm install
+npm ci
 npm run dev
 ```
 
@@ -23,4 +23,4 @@ npm run dev
 
 ## License
 
-The code is MIT licensed; see [LICENSE.md](LICENSE.md). The text, images and other site content are © Sean Kennedy, all rights reserved.
+The code is MIT licensed; see [LICENSE](LICENSE). The text, images and other site content are © Sean Kennedy, all rights reserved.
